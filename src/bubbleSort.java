@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class bubbleSort {
 	private int counter = 0;
-	public ArrayList sort(ArrayList<? extends Number> array){
+	public ArrayList sort(ArrayList<Number> array){
 		for (Number numero: array){
 			counter++;
 			if (numero.doubleValue() > array.get(counter).doubleValue()){
