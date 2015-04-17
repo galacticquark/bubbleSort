@@ -1,9 +1,8 @@
-import java.math.BigDecimal;
 import java.util.ArrayList;
 //AESO 343 POO
 
 public class bubbleSort {
-	public ArrayList sort(ArrayList<Number> array){
+	public ArrayList<Number> sort(ArrayList<Number> array){
 		for (int i = 0; i< array.size(); i++){
 			for (int e = 0; e < array.size(); e++){
 				if (array.get(e).doubleValue() > array.get(e + 1).doubleValue()){
@@ -23,15 +22,15 @@ public class bubbleSort {
 		myList.add(9);
 		myList.add(12);
 		myList.add(1);
-		myList.add(10);
+		myList.add(3000);
 		myList.add(0.000001);
 		myList.add(10.0);
-		myList.add((long)10);
+		myList.add((long)1230);
 		myList.add((short)1.2);		
 		myList.add((float)10);
 		myList.add((byte)5);
-		System.out.println(mySort.sort(myList));
+		System.out.println("Original ArrayList = " + myList);
 		
-		
+		System.out.println("\n\n\nSorted ArrayList = " + mySort.sort(myList));		
 		}
 }
