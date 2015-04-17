@@ -1,19 +1,17 @@
 import java.math.BigDecimal;
 import java.util.ArrayList;
-
+//AESO 343 POO
 
 public class bubbleSort {
 	public ArrayList sort(ArrayList<Number> array){
-		for (Number num: array){
-			int counter = 0;
-			for (Number numero: array){
-				counter++;
-				if (numero.doubleValue() > array.get(counter).doubleValue()){
+		for (int i = 0; i< array.size(); i++){
+			for (int e = 0; e < array.size(); e++){
+				if (array.get(e).doubleValue() > array.get(e + 1).doubleValue()){
 					//if the first number is larger than the second one
-					Number temp = numero;//save first number
-					array.set(counter - 1, array.get(counter));//set second number in first num. position
-					array.set(counter,temp);//set original firt number in second position 
-				}
+					Number temp = array.get(e);//save first number
+					array.set(e, array.get(e + 1));//set second number in first num. position
+					array.set(e + 1,temp);//set original firt number in second position
+				}if(e + 2 >= array.size()){break;}
 			}
 		}
 		return array;
@@ -21,6 +19,10 @@ public class bubbleSort {
 	public static void main(String[] args){
 		bubbleSort mySort = new bubbleSort();
 		ArrayList<Number> myList= new ArrayList<Number>();
+		myList.add(10);
+		myList.add(9);
+		myList.add(12);
+		myList.add(1);
 		myList.add(10);
 		myList.add(0.000001);
 		myList.add(10.0);
